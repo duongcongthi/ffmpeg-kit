@@ -546,9 +546,9 @@ ${SED_INLINE} 's/static int av_log_level/__thread int av_log_level/g' "${BASEDIR
   --disable-cuda \
   --disable-cuvid \
   --disable-nvenc \
-  --disable-vaapi \
   --disable-vdpau \
-  ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
+  ${CONFIGURE_POSTFIX} \
+  ${FFMPEG_ADDITIONAL_CONFIGURE_OPTIONS} 1>>"${BASEDIR}"/build.log 2>&1
 
 if [[ $? -ne 0 ]]; then
   echo -e "failed\n\nSee build.log for details\n"
