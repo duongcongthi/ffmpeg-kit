@@ -11,7 +11,9 @@ cd ffmpeg-kit
 ./ios.sh \
   --target=14.0 \
   --enable-gpl \
+  --enable-x264 \
   --enable-lame \
+  --enable-ios-videotoolbox \
   --disable-armv7 \
   --disable-armv7s \
   --disable-i386 \
